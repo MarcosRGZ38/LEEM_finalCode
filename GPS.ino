@@ -11,6 +11,7 @@ void setup(){
   while(!Serial){
     ; //wait for serial port to connect
   }
+  
   Wire.begin();
   if(myGNSS.begin() == false){
     Serial.println(F("u-blox GNSS not detected at default I2C address. Please check wiring. Freezing."));
